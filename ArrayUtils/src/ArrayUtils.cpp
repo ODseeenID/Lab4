@@ -1,10 +1,10 @@
 #include "ArrayUtils.h"
 #include <algorithm>
 
-namespace ArrayUtils {
+// замість namespace extern "C"
+extern "C" {
     void quickSort(int* arr, int size) {
-        //від граничних випадків nullptr або порожній масив
-        if (arr && size > 1) {
+        if (arr && size > 1) { //від граничних випадків nullptr/порожній масив 
             std::sort(arr, arr + size); // базується на QuickSort/IntroSort
         }
     }

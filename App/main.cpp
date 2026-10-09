@@ -14,21 +14,24 @@ int main() {
 
     std::cout << "Original array: ";
     printArray(arr, size);
-    std::cout << "Is sorted? " << (ArrayUtils::isSorted(arr, size) ? "Yes" : "No") << std::endl;
+    std::cout << "Is sorted? " << (isSorted(arr, size) ? "Yes" : "No") << std::endl;
 
-    ArrayUtils::quickSort(arr, size);
+    quickSort(arr, size);
 
     std::cout << "Sorted array: ";
     printArray(arr, size);
-    std::cout << "Is sorted? " << (ArrayUtils::isSorted(arr, size) ? "Yes" : "No") << std::endl;
+    std::cout << "Is sorted? " << (isSorted(arr, size) ? "Yes" : "No") << std::endl;
 
     int minVal, maxVal;
-    ArrayUtils::findExtremes(arr, size, &minVal, &maxVal);
+    findExtremes(arr, size, &minVal, &maxVal);
     std::cout << "Min: " << minVal << ", Max: " << maxVal << std::endl;
 
-    //перевірка страховки
-    ArrayUtils::mergeSort(nullptr, 5); 
+    // Перевірка захисту від дурня
+    mergeSort(nullptr, 5);
     std::cout << "Edge case test passed successfully." << std::endl;
+
+    std::cout << "Press Enter to exit... ";
+    std::cin.get();
 
     return 0;
 }
